@@ -30,3 +30,10 @@
    width: 20px;
    height: 20px;
 }
+
+/* Adjustment for desktop viewport */
+@media only screen and (min-width: 1024px) {
+   .productImage {
+      height: auto;
+   }
+}

@@ -12,7 +12,10 @@ class Performer extends Component {
                <img src={ProfileIcon} alt="performer-profile-icon" className={classes.profileIcon} />
                <span>Hassunhauska</span>
             </NameCard>
-            <Product />
+            <div className={classes.productList}>
+               <Product />
+               <Product />
+            </div>
          </div>
       );
    }
