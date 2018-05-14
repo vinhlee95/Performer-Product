@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Performer from './Performer/Performer';
+
 import Button from './UI/Button/Button';
 import classes from './App.css';
 
@@ -11,6 +13,7 @@ class App extends Component {
                <Button name="+ Lisää esiintyjä" />
                <Button name="+ Lisää esitys" />
             </div>
+            <Performer />            
          </div>
       );
    }
