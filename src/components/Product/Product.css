@@ -12,7 +12,7 @@
 .priceRow {
    position: absolute;
    width: 100%;
-   top: 60%;
+   top: 70%;
    left: 0;
    color: white;
    display: flex;
@@ -35,5 +35,8 @@
 @media only screen and (min-width: 1024px) {
    .productImage {
       height: auto;
+   }
+   .priceRow {
+      top: 80%;
    }
 }
