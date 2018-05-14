@@ -1,7 +1,7 @@
 import React from 'react';
 import classes from './NameCard.css';
 
-const NameCard = (props) => {
+const Card = (props) => {
    return(
       <div className={classes.card} >
          {props.children}
@@ -9,4 +9,4 @@ const NameCard = (props) => {
    );
 }
 
-export default NameCard;
+export default Card;
