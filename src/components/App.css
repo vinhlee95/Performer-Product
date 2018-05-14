@@ -1,0 +1,9 @@
+.App {
+   width: 90%;
+   margin: 0 auto;
+}
+
+.buttonRow {
+   border-bottom: .5px solid lightgrey;
+   padding-bottom: 10px;
+}
