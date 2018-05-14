@@ -14,6 +14,7 @@ class App extends Component {
                <Button name="+ Lisää esitys" />
             </div>
             <Performer />            
+            <Performer />            
          </div>
       );
    }

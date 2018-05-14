@@ -1,5 +1,6 @@
 .card {
    border: .5px solid lightgrey;
-   padding: 10px 10px;
-   display: grid;
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
 }
