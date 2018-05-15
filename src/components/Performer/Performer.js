@@ -6,7 +6,6 @@ import Product from '../Product/Product';
 class Performer extends Component {
 
    render() {
-      console.log(this.props.data);
       const { data, products } = this.props.data;    
       let renderProducts = products.map(({ description, audienceSize, duration, id, price, productImage }) => {
          return (

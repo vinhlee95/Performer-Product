@@ -1,7 +1,6 @@
 import React from 'react';
 import ProductCard from '../UI/ProductCard/ProductCard';
 import classes from './Product.css';
-import ProfileIcon from '../../images/profile-icon.svg';
 
 const Product = ({
       description,
