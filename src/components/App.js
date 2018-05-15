@@ -3,7 +3,6 @@ import Performer from './Performer/Performer';
 import request from 'superagent';
 import Button from './UI/Button/Button';
 import classes from './App.css';
-import Product from '../components/Product/Product';
 
 class App extends Component {
    constructor(props) {
@@ -26,7 +25,7 @@ class App extends Component {
    render() {
       let renderPerformers;
       if(this.state.performers) {
-         renderPerformers = <Product />;
+         renderPerformers = <Performer data={this.state.performers} />;
       } else {
          renderPerformers = <div>Loading...</div>;
       }

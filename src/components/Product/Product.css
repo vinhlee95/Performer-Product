@@ -30,6 +30,13 @@
    width: 20px;
    height: 20px;
 }
+.productInfo {
+   width: 90%;
+   margin: 5px auto;
+}
+p {
+   margin: 5px 0;
+}
 
 /* Adjustment for desktop viewport */
 @media only screen and (min-width: 1024px) {

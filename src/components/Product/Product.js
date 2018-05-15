@@ -1,23 +1,35 @@
 import React from 'react';
 import ProductCard from '../UI/ProductCard/ProductCard';
 import classes from './Product.css';
-import ProductImage from '../../images/product-image.jpg';
 import ProfileIcon from '../../images/profile-icon.svg';
 
-const Product = (props) => {
+const Product = ({
+      description,
+      audienceSize,
+      duration,
+      id,
+      price,
+      productImage,
+      name,
+      profileThumb,
+   }) => {
    return(
       <ProductCard>
          <div className={classes.imageContainer} >
-            <img src={ProductImage} alt="product-img" className={classes.productImage} />
+            <img src={productImage} alt="product-img" className={classes.productImage} />
             <div className={classes.priceRow}>
-               <span className={classes.price} >Price</span>
+               <span className={classes.price} >{price}€</span>
                <div>
-                  <img src={ProfileIcon} alt="profile-icon" className={classes.profileIcon} />
-                  <span>Hassunhauska</span>
+                  <img src={profileThumb} alt="profile-icon" className={classes.profileIcon} />
+                  <span style={{paddingRight: 10}} >{name}</span>
                </div>
             </div>
          </div>
-         Here is product information
+         <div className={classes.productInfo}>
+            <p><strong>Description: </strong>{description}</p>
+            <p><strong>Duration: </strong>{duration}</p>
+            <p><strong>Audience size: </strong>{audienceSize}</p>
+         </div>
       </ProductCard>
    );
 }
