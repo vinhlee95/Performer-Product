@@ -1,11 +1,36 @@
 import React, { Component } from 'react';
 import Performer from './Performer/Performer';
-
+import request from 'superagent';
 import Button from './UI/Button/Button';
 import classes from './App.css';
+import Product from '../components/Product/Product';
 
 class App extends Component {
+   constructor(props) {
+      super(props);
+      this.state = {};
+   }
+
+   componentDidMount() {
+      request
+         .post('https://nodedev.gigleapp.com/user')
+         .send({
+            action: 'getPerformersAndProducts',
+            userId: 'ZuaqGwjNc6M47HchSJYVa2lunf03'
+         })
+         .end((err, res) => {
+            res ? this.setState({ performers: res.body[0] }) : console.log('Error fetching')
+         });
+   }
+
    render() {
+      let renderPerformers;
+      if(this.state.performers) {
+         renderPerformers = <Product />;
+      } else {
+         renderPerformers = <div>Loading...</div>;
+      }
+
       return(
          <div className={classes.App} >
             <h2>Performers & Products</h2>
@@ -13,8 +38,7 @@ class App extends Component {
                <Button name="+ Lisää esiintyjä" />
                <Button name="+ Lisää esitys" />
             </div>
-            <Performer />            
-            <Performer />            
+            {renderPerformers}           
          </div>
       );
    }
