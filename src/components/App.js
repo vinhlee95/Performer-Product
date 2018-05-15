@@ -23,7 +23,6 @@ class App extends Component {
    }
 
    render() {
-      console.log(this.state.performers)
       let renderPerformers;
       if(this.state.performers) {
          renderPerformers = this.state.performers.map((performer, index) => {
