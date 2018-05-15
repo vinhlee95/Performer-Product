@@ -18,14 +18,17 @@ class App extends Component {
             userId: 'ZuaqGwjNc6M47HchSJYVa2lunf03'
          })
          .end((err, res) => {
-            res ? this.setState({ performers: res.body[0] }) : console.log('Error fetching')
+            res ? this.setState({ performers: res.body }) : console.log('Error fetching')
          });
    }
 
    render() {
+      console.log(this.state.performers)
       let renderPerformers;
       if(this.state.performers) {
-         renderPerformers = <Performer data={this.state.performers} />;
+         renderPerformers = this.state.performers.map((performer, index) => {
+            return <Performer key={index} data={performer} />
+         });
       } else {
          renderPerformers = <div>Loading...</div>;
       }
